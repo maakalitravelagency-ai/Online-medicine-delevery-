@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Online Medicine Delivery | Narsingarh</title>
+<meta name="description" content="Order genuine medicines online in Narsingarh. Get 10% discount and no delivery charges.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#123;background:#f7fbfa}
+header{background:linear-gradient(135deg,#0757c8,#08a95b);color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:5}
+.logo{font-size:22px;font-weight:800}.location{font-size:14px}
+.hero{padding:55px 6%;background:white;text-align:center}.hero h1{font-size:clamp(34px,6vw,62px);margin:10px 0;color:#0757c8}.hero h1 span{color:#08a95b}.hero p{font-size:20px;color:#456}
+.offer{display:inline-block;background:#e92222;color:#fff;padding:14px 24px;border-radius:12px;font-weight:800;font-size:22px;margin:15px 0}.free{display:inline-block;background:#08a95b;color:#fff;padding:14px 24px;border-radius:12px;font-weight:800;font-size:20px;margin:5px}
+.btn{display:inline-block;padding:14px 22px;border-radius:10px;text-decoration:none;font-weight:800;margin:8px}.primary{background:#0757c8;color:#fff}.secondary{background:#e9f5ff;color:#0757c8}
+section{padding:42px 6%;max-width:1100px;margin:auto}h2{text-align:center;color:#0757c8}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}.card{background:white;padding:24px;border-radius:18px;box-shadow:0 5px 22px #00000010;text-align:center}.icon{font-size:38px}
+.order{background:#eaf8f1;border-radius:20px;padding:28px}.order input,.order textarea{width:100%;padding:13px;margin:7px 0;border:1px solid #ccd8d4;border-radius:9px}.order button{border:0;cursor:pointer}
+footer{background:#063d8d;color:white;text-align:center;padding:28px 6%;margin-top:20px}
+.small{font-size:13px;opacity:.85}
+</style>
+</head>
+<body>
+<header><div class="logo">💊 Online Medicine Delivery</div><div class="location">📍 Narsingarh • 📞 6009415805</div></header>
+
+<div class="hero">
+<div class="offer">GET 10% DISCOUNT</div>
+<div class="free">🚚 NO DELIVERY CHARGES</div>
+<h1>Online <span>Medicine</span> Delivery</h1>
+<p>Genuine medicines • Fast delivery • At your doorstep</p>
+<a class="btn primary" href="#order">Order Medicine</a>
+<a class="btn secondary" href="tel:+916009415805">Call Now</a>
+</div>
+
+<section>
+<h2>Why Choose Us?</h2>
+<div class="cards">
+<div class="card"><div class="icon">✅</div><h3>Genuine Medicines</h3><p>Quality medicines from trusted sources.</p></div>
+<div class="card"><div class="icon">⚡</div><h3>Fast Delivery</h3><p>Quick doorstep delivery in Narsingarh.</p></div>
+<div class="card"><div class="icon">🏠</div><h3>At Your Doorstep</h3><p>Order from home and receive your medicines.</p></div>
+<div class="card"><div class="icon">❤️</div><h3>Better Health</h3><p>Your health and convenience come first.</p></div>
+</div>
+</section>
+
+<section id="order">
+<h2>Place Your Order</h2>
+<div class="order">
+<p><b>Send your medicine details and we will contact you.</b></p>
+<form onsubmit="sendOrder(event)">
+<input id="name" placeholder="Your Name" required>
+<input id="phone" placeholder="Mobile Number" inputmode="tel" required>
+<textarea id="med" rows="4" placeholder="Medicine name / prescription details" required></textarea>
+<button class="btn primary" type="submit">📲 Send Order</button>
+</form>
+<p class="small">Prescription medicines may require a valid prescription and pharmacist verification.</p>
+</div>
+</section>
+
+<footer>
+<b>Online Medicine Delivery — Narsingarh</b>
+<p>Get 10% Discount • No Delivery Charges</p>
+<p>📞 6009415805 • Call / WhatsApp</p><p class="small">Stay Healthy • Stay Safe</p>
+</footer>
+
+<script>
+function sendOrder(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value;
+ const p=document.getElementById('phone').value;
+ const m=document.getElementById('med').value;
+ const msg=`Medicine Order%0AName: ${encodeURIComponent(n)}%0AMobile: ${encodeURIComponent(p)}%0AMedicine: ${encodeURIComponent(m)}`;
+ const wa="916009415805"; const url=`https://wa.me/${wa}?text=${msg}`; window.open(url,"_blank");
+}
+</script>
+</body>
+</html>
